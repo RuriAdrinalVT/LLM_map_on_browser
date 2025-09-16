@@ -20,7 +20,8 @@ class MapLLM:
 
 
    def STRING_PROCESS(str_response):
-        coordinates_string = coordinates_json
+        print(str_response)
+        coordinates_string = str_response
         print("print latitude and longitude data from AI LLM OLLAMA json----->")
         substring1 = "{"
         substring2 = "}"
@@ -45,4 +46,5 @@ class MapLLM:
 MapLLMinstance = MapLLM
 MapLLMinstance.address_to_find_str = MapLLMinstance.Address_to_find()
 MapLLMinstance.STRING_PROCESS(MapLLMinstance.decode_address(MapLLMinstance.address_to_find_str))
+
 
